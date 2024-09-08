@@ -1,0 +1,127 @@
+
+:root {
+    --white-color: #ffffff;
+    --bg-color: #f0f0f0; /* Light background color */
+    --primary-color: #ff5722; /* Bright orange */
+    --secondary-color: #4caf50; /* Green */
+    --header-footer-bg: #493b3b; /* Dark header and footer background */
+    --header-footer-text: #717a4d; /* Light text color */
+    --hover-bg: rgba(255, 87, 34, 0.1); /* Light orange hover background */
+    --hover-shadow: rgba(0, 0, 0, 0.3); /* Shadow color for hover effects */
+}
+
+/* Changing background color */
+body {
+    background: var(--bg-color) !important;
+}
+
+/* Header and footer styles */
+header, footer {
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
+}
+
+/* Changing link color in header and footer */
+.navbar-nav .nav-link {
+    color: var(--white-color);
+}
+
+footer .social-icons a {
+    color: var(--header-footer-text);
+}
+/* Hero subtitle text color */
+.hero-subtitle {
+    color: #eb8e72; /* Change this to your desired color */
+}
+
+/* Hero section styles */
+.hero {
+    height: 100vh;
+    background-image: url("sayak2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--white-color);
+}
+
+/* Profile section styles */
+#about .profile-img {
+    width: 150px; /* Set width to 150px */
+    height: 150px; /* Set height to 150px */
+    object-fit: cover; /* Ensure the image covers the element without distortion */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px var(--hover-shadow);
+}
+
+
+#about .profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px var(--hover-shadow);
+}
+
+/* Skills and Projects section styles */
+.card, .card-wrapper {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .card-wrapper:hover {
+    background-color: var(--hover-bg);
+    box-shadow: 0 4px 8px var(--hover-shadow);
+}
+
+#skills i, #portfolio img {
+    height: 100px;
+    width: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills i:hover, #portfolio img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px var(--hover-shadow);
+}
+
+#portfolio .card-wrapper {
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Contact section background image */
+#contact {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("sayak5.jpg");
+}
+
+
+@media screen and (max-width: 990px) {
+    #skills .card {
+        width: calc(100% / 2 - 10px) !important;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    #skills .card,
+    #portfolio .card-wrapper {
+        width: 100% !important;
+    }
+    #about .hire-text h2 {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+/* Responsive design adjustments */
+img {
+    max-width: 100%;
+    height: auto;
+}
